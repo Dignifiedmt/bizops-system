@@ -1,0 +1,85 @@
+.charts-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.chart-card {
+    flex: 1;
+    min-width: 18rem;
+    border: 1px solid #cedce8;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.chart-title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #0d151c;
+}
+
+.chart-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0d151c;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.chart-sub {
+    display: flex;
+    gap: 0.25rem;
+    color: #49749c;
+    font-size: 1rem;
+}
+
+.trend {
+    font-weight: 500;
+    color: #078838;
+}
+
+.sales-chart-placeholder {
+    height: 9rem;
+    background-color: #e7edf4;
+    border-radius: 0.5rem;
+}
+
+.chart-labels {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 0.5rem;
+    font-size: 0.8125rem;
+    color: #49749c;
+    font-weight: bold;
+}
+
+.bar-graph {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: end;
+    gap: 1rem;
+    min-height: 180px;
+    padding-top: 1rem;
+}
+
+.bar {
+    width: 100%;
+    border-top: 2px solid #49749c;
+    background-color: #e7edf4;
+}
+
+.bar-labels {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    font-size: 0.8125rem;
+    color: #49749c;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    text-align: center;
+}
