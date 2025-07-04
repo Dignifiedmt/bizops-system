@@ -1,0 +1,485 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", "Noto Sans", sans-serif;
+    background-color: #f8fafc;
+    color: #0d141c;
+    font-size: 16px;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+    padding: 3rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-container {
+    display: flex;
+    flex: 1;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #e7edf4;
+    background-color: #fff;
+}
+
+.header-content {
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    color: #0d141c; */
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 2.5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.header-logo-icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+.header-logo h2 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+}
+
+.nav-link {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #0d151c;
+    text-decoration: none;
+    padding: 0 1em 0 1em;
+}
+
+/* Footer Styles */
+.footer {
+    padding: 1rem 2.5rem;
+    background-color: #fff;
+    text-align: center;
+    color: #49739c;
+    font-size: 0.875rem;
+}
+
+/* SideNav Styles */
+.sidenav {
+    width: 15rem;
+    padding: 3rem 1rem;
+    background-color: #f8fafc;
+    height: 100vh;
+    border-right: 1px solid #e7edf4;
+}
+
+.sidenav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidenav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 1rem;
+    color: #0d151c;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.sidenav-link:hover {
+    background-color: #e7edf4;
+}
+
+.sidenav-link.active {
+    background-color: #e7edf4;
+    color: #0d151c;
+}
+
+.sidenav-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* Login Form Styles */
+.login-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 30rem;
+    width: 100%;
+    padding: 1.25rem;
+    margin: 0 auto;
+}
+
+.login-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #0d141c;
+    text-align: center;
+    padding-bottom: 0.75rem;
+    padding-top: 1.25rem;
+    letter-spacing: -0.015em;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 30rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0.75rem 1rem;
+}
+
+.form-input {
+    width: 100%;
+    height: 3.5rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #e7edf4;
+    color: #0d141c;
+    font-size: 1rem;
+    outline: none;
+}
+
+.form-input::placeholder {
+    color: #49739c;
+}
+
+.forgot-password {
+    padding: 0.25rem 1rem 0.75rem;
+    color: #49739c;
+    font-size: 0.875rem;
+    text-align: left;
+}
+
+.forgot-password a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.login-button {
+    width: 100%;
+    height: 3rem;
+    background-color: #0c7ff2;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin: 0.75rem 1rem;
+    letter-spacing: 0.015em;
+}
+
+.login-button:hover {
+    background-color: #005bb5;
+}
+
+.signup-link {
+    color: #49739c;
+    font-size: 0.875rem;
+    text-align: center;
+    padding: 0.25rem 1rem 0.75rem;
+}
+
+.signup-link a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+/* Dashboard Card Styles */
+.dashboard-card {
+    flex: 1;
+    min-width: 9.875rem;
+    padding: 1.5rem;
+    background-color: #e7edf4;
+    border-radius: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.card-title {
+    color: #0d151c;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.card-value {
+    color: #0d151c;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+}
+
+.card-change {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+/* Sales Chart Styles */
+.sales-chart {
+    flex: 1;
+    min-width: 18rem;
+    padding: 1.5rem;
+    border: 1px solid #cedce8;
+    border-radius: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.chart-title {
+    color: #0d151c;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.chart-value {
+    color: #0d151c;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+}
+
+.chart-meta {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.chart-period {
+    color: #49749c;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.chart-change {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.chart-container {
+    flex: 1;
+    min-height: 11.25rem;
+    padding-top: 1rem;
+}
+
+.chart-labels {
+    display: flex;
+    justify-content: space-around;
+}
+
+.chart-label {
+    color: #49749c;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.015em;
+}
+
+.bar-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+    align-items: end;
+    justify-items: center;
+    padding: 0 0.75rem;
+}
+
+.bar {
+    width: 100%;
+    background-color: #e7edf4;
+    border-top: 2px solid #49749c;
+}
+
+.bar-label {
+    color: #49749c;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.015em;
+}
+
+/* Admin Dashboard Styles */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 1rem;
+}
+
+.header-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    min-width: 18rem;
+}
+
+.dashboard-title {
+    color: #0d151c;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+}
+
+.dashboard-subtitle {
+    color: #49749c;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.profile-pic {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.dashboard-metrics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.section-title {
+    color: #0d151c;
+    font-size: 1.375rem;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    padding: 1.25rem 1rem 0.75rem;
+}
+
+.sales-charts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1.5rem 1rem;
+}
+
+/* Sales Page Styles */
+.sales-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 1rem;
+}
+
+.sales-title {
+    color: #0d151c;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+}
+
+.sales-subtitle {
+    color: #49749c;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.sales-tabs {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem;
+    border-bottom: 1px solid #cedce8;
+}
+
+.tab-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0 0.8125rem;
+    color: #49749c;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.015em;
+    border-bottom: 3px solid transparent;
+}
+
+.tab-link.active {
+    color: #0d151c;
+    border-bottom: 3px solid #0b80ee;
+}
+
+.sales-filter {
+    max-width: 30rem;
+    padding: 0.75rem 1rem;
+}
+
+.form-select {
+    width: 100%;
+    height: 3.5rem;
+    padding: 0.9375rem;
+    border: 1px solid #cedce8;
+    border-radius: 0.75rem;
+    background-color: #f8fafc;
+    color: #0d151c;
+    font-size: 1rem;
+    outline: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724px%27 height=%2724px%27 fill=%27rgb(73,116,156)%27 viewBox=%270 0 256 256%27%3e%3cpath d=%27M181.66,170.34a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-48-48a8,8,0,0,1,11.32-11.32L128,212.69l42.34-42.35A8,8,0,0,1,181.66,170.34Zm-96-84.68L128,43.31l42.34,42.35a8,8,0,0,0,11.32-11.32l-48-48a8,8,0,0,0-11.32,0l-48,48A8,8,0,0,0,85.66,85.66Z%27%3e%3c/path%3e%3c/svg%3e");
+    background-position: right 0.9375rem center;
+    background-repeat: no-repeat;
+    appearance: none;
+}
+
+.sales-metrics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.sales-over-time {
+    flex: 1;
+    min-width: 18rem;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
